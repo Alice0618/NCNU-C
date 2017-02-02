@@ -18,13 +18,13 @@ int main() {
     // 印出上半部三角形
     for(i = 1; i <= n; i++) {
         print(' ', n - i);
-        print('*', 2 * i - 1);
+        print('x', 2 * i - 1);
         printf("\n");
     }
     // 印下半部三角形
     for(i = n - 1; i >= 1; i--) {
         print(' ', n - i);
-        print('*', 2 * i - 1);
+        print('x', 2 * i - 1);
         printf("\n");
     }
 }

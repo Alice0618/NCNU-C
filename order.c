@@ -5,9 +5,10 @@ int main() {
     scanf("%d", &n);
     int num[n];
     for(i = 0; i < n; i++) {
-        num[i] = i + 1;
+        num[i] = i++;
     }
-    for(i = 0; i < n; i++) { // 未排序
+    // 未排序
+    for(i = 0; i < n; i++) {
         j = rand() % n;
         tmp = num[i];
         num[i] = num[j];
@@ -17,7 +18,8 @@ int main() {
         printf("%d ", num[i]);
     }
     printf("\n");
-    for(i = 0; i < n; i++) { // 排序
+    // 排序
+    for(i = 0; i < n; i++) {
         for(j = i + 1; j < n; j++) {
             if(num[j] > num[i]) {
                 tmp = num[i];

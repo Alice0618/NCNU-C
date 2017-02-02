@@ -14,9 +14,11 @@ int PrimeFun(int n) {
 int main() {
     int n;
     scanf("%d", &n);
-    if(PrimeFun(n) == 1) {
-        printf("Prime\n");
+    if(n == 1) {
+        printf("Both not");
+    } else if(PrimeFun(n) == 1) {
+        printf("Prime");
     } else {
-        printf("Not Prime\n");
+        printf("Not Prime");
     }
 }

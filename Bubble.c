@@ -22,7 +22,8 @@ int main() {
         }
         printf("\n");
     }
-    for(i = i + 1; i < n; i++) {
+    printf("\n");
+    for(i = 0; i < n; i++) {
         printf("%d ", num[i]);
     }
     printf("\n");

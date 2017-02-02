@@ -4,13 +4,16 @@ int main() {
     float average, add = 0, median;
     scanf("%d", &n);
     int num[n];
-    for(i = 0; i < n; i++) { // 平均數
+
+    // 平均數
+    for(i = 0; i < n; i++) {
         scanf("%d", &num[i]);
         add = add + num[i];
     }
     average = add / n;
 
-    for(i = 0; i < n; i++) { // 最大最小值
+    // 最大最小值
+    for(i = 0; i < n; i++) {
         for(j = i + 1; j < n; j++) {
             if(num[j] > num[i]) {
                 tmp = num[i];
@@ -22,7 +25,8 @@ int main() {
         }
     }
 
-    if(n % 2 == 0) { // 中位數
+    // 中位數
+    if(n % 2 == 0) {
         median = (num[n / 2] + num[n / 2 + 1]) / 2;
     } else if(n % 2 != 0) {
         median = num[n / 2 + 1];

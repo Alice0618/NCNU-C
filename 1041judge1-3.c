@@ -3,8 +3,9 @@ int main() {
     int month, use;
     float mon;
     scanf("%d %d", &month, &use);
-    if(6 <= month && month <= 9) {//判斷月份
-        //判斷度數
+    // 判斷月份
+    if(6 <= month && month <= 9) {
+        // 判斷度數
         if(use <= 120) {
             mon = use * 2.10;
         } else if(121 <= use && use <= 330) {
@@ -19,7 +20,7 @@ int main() {
             mon = 120 * 2.10 + 210 * 3.02 + 170 * 4.39 + 200 * 5.44 + 300 * 6.16 + (use - 1000)*6.71;
         }
     } else {
-        //判斷度數
+        // 判斷度數
         if(use <= 120) {
             mon = use * 2.10;
         } else if(121 <= use && use <= 330) {

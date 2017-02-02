@@ -8,7 +8,6 @@ int prime(int n) {
     }
     return 1;
 }
-
 int main() {
     int n, i, j, k, add;
     char string[50];
