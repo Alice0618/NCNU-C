@@ -1,6 +1,5 @@
 #include <stdio.h>
 // 最大值、最小值、總和
-
 int main() {
     int data[10];
     int i, j, sum = 0, tmp;
