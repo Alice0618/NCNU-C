@@ -14,19 +14,21 @@ double power(double x, int n) {
 }
 // 再作 x ^ (1/ n)
 double root(double x, int n) {
-    double left, right, mid;
+    // 依據傳入的 x設定左右邊界
+    double left,right;
     if(x >= 1) {
         left = 1;
         right = x;
     } else {
-        left = 0;
-        right = x;
+        left = x;
+        right = 1;
     }
-    mid = (left + right) / 2;
-    while(mid > left && mid < right) {
-        if(power(mid, n) > x) {
+    double mid = (left + right) / 2;
+    // 取兩邊界之中間值不斷乘以 n次方，並調整左右邊界，以取得近似值
+    while (mid > left && mid < right) {
+        if (power(mid, n) > x) {
             right = mid;
-        } else if(power(mid, n) < x) {
+        } else if (power(mid, n) < x) {
             left = mid;
         } else {
             return mid;
@@ -35,7 +37,7 @@ double root(double x, int n) {
     }
     return mid;
 }
-double expp(double x,int n,int m) {
+double expp(double x,int m,int n) {
     return power(root(x, n), m);
 }
 // 1.3 轉成 13 / 10
@@ -48,5 +50,6 @@ double expdouble(double x, double y) {
     return expp(x, n, y);
 }
 int main() {
-    printf("%lf", expdouble(4.0, 1.3));
+    printf("%lf\n", expdouble(4.0, 1.3));
+    printf("%lf", expp(3.0, 2.0, 1.0));
 }
